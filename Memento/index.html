@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="/home/cedric/Documents/website/Memento/assets/css/style.css" />
+  <title>Mon Mémento</title>
+</head>
+<body>
+  <h1>SOMMAIRE</h1>
+  <p><a href="#cmd">Ligne de commande</a></p>
+  <p><a href="#github">Github</a></p>
+  <p><a href="#html">Balises HTML</a></p>
+  <p><a href="#css">Balises CSS</a></p>
+  <h2 id="cmd">Ligne de commande</h2>
+    <table>
+    <caption>Tableau récapitulatif des principales commandes du terminal</caption>
+    <thead>
+      <tr>
+        <th>Nom de la commande</th>
+        <th>Signification
+        <th>Descriptif</th>
+        <th>Autres options possibles</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>man</td>
+        <td>Manuel, page de manuel
+        <td>Affiche le manuel d'utilisation d'une commande, d'un fichier ou d'un programme</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>ls</td>
+        <td>List segment</td>
+        <td>Permet de lister un répertoire</td>
+        <td>ls -l (affichage détaillé du répertoire)<br/>
+            ls -a (affichage des fichiers et répertoire cachés)
+        </td>
+      </tr>
+      <tr>
+        <td>cd</td>
+        <td>Change directory</td>
+        <td>Permet de se promener dans les répertoires</td>
+        <td>cd - (permet de revenir au répertoire précédent)<br />
+            cd ..(permet de revenir au répertoire parent)<br />
+            cd / (permte de remonter a l'ensemble du système de la racine)
+        </td>
+      </tr>
+      <tr>
+        <td>mv</td>
+        <td>Move</td>
+        <td>permet de déplacer ou de renommer un fichier ou un répertoire</td>
+        <td>mv -f (écrase les fichier de destination sans confiramtion)<br />
+            mv -i (demande la confirmation avant décraser)<br />
+            mv -u (n'écrase pas le fichier de destinatio si celui-ci est plus récent)
+        </td>
+      </tr>
+      <tr>
+        <td>cp</td>
+        <td>Copy</td>
+        <td>Permet de copier des fichiers ou des répertoires</td>
+        <td>cp -a (copie en gardant les droits, dates proprio, groupes...)<br />
+            cp -i (demande confiramtiona avant d'écraser)<br />
+            cp -r (copie un répertoire et tout son contenu)<br />
+            cp -u (ne copie que les fichiers les plus récent ou qui n'éxistent pas)<br />
+            cp -v (permet de suivre les copies en temps réel)
+          </td>
+        </tr>
+        <tr>
+          <td>rm</td>
+          <td>Remove</td>
+          <td>permet d'effacer les fichiers, à utiliser avec beaucoup d'attention</td>
+          <td>rm -rf/* (/!\ DISPARITION IMMÉDIATE DE TOUS LES FICHIERS!)</td>
+        </tr>
+        <tr>
+          <td>mkdir</td>
+          <td>Make directory</td>
+          <td>Créer un répertoire vide</td>
+          <td>mkdir -p (créer les répertoires parents s'ils n'éxistent pas)</td>
+        </tr>
+        <tr>
+          <td>pwd</td>
+          <td>Print working directory</td>
+          <td>affiche le répertoire de travail</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>sudo</td>
+          <td>Substitule user -do</td>
+          <td>Commande super utilisateur, permet d'exécuter des commandes en tant qu'un autre utilisateur, donc avec d'autres privilèges</td>
+          <td>sudo -s (importe les variable d'environnement du shell)</td>
+        </tr>
+        <tr>
+          <td>apt</td>
+          <td>avanced package tool</td>
+          <td>permet l'installation et la désinstallation de paquets en tenant compte des dépendances ainsi que le télechargements des paquets s'ils sont sur une source réseau</td>
+          <td>apt update (met à jour la liste des paquets)<br />
+              apt uprade (met à jour tous les paquets déjà installés)<br />
+              apt install (installe un ou plusieurs paquets)<br />
+              apt remove (supprime un ou plusieurs paquets)
+            </td>
+          </tr>
+    </tbody>
+  </table>
+  <h2 id="github">Github</h2>
+  <h3>Utilsation de Github à l'aide du terminal</h3>
+  <table>
+<thead>
+  <tr>
+    <th>Commande</th>
+    <th>Action</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>git init</td>
+    <td>Permet de créer un nouveau dépot</td>
+  </tr>
+  <tr>
+    <td>git add</td>
+    <td>Indique le suivi d'un fichier</td>
+  </tr>
+  <tr>
+    <td>git commit -m</td>
+    <td>Création d'une sauvegarde, en vue de l'exportée sur github</td>
+  </tr>
+  <tr>
+    <td>git remote -u + URL</td>
+    <td>Indique l'URL du repository au dépot</td>
+  </tr>
+  <tr>
+    <td>push -u origin master</td>
+    <td>Envoie du fichier vers le repository Github</td>
+  </tr>
+  <tr>
+    <td>git status</td>
+    <td>Indique le suivis d'un dépot</td>
+  </tr>
+  <tr>
+    <td>git log</td>
+    <td>Hisotrique d'un dépot</td>
+  </tr>
+  <tr>
+    <td>git branch + nom</td>
+    <td>Création d'une branche pour un repo</td>
+  </tr>
+  <tr>
+    <td>git checkout + nom de la branche</td>
+    <td>Basculer sur une branche donnée</td>
+  </tr>
+  <tr>
+    <td>git checkout -d</td>
+    <td>Retour sur la branche master</td>
+  </tr>
+  <tr>
+    <td>git branch -d +nom branche</td>
+    <td>suppression d'une branche donnée</td>
+</tr>
+<tr>
+  <td>git merge + nom branche</td>
+  <td>Fusionner la branche sur master</td>
+</tr>
+<tr>
+  <td>git pull</td>
+  <td>Télécharger un repo git</td>
+</tr>
+</tbody>
+</table>
+<h3>Tuto</h3>
+<p>Dans le terminal</p>
+<ol>
+  <li>Créer un répertoire qui servira de base de travail (mkdir)</li>
+  <li>Créer un fichier (.html, .css ...) (touch)</li>
+  <li>Appeler le fichier dans un editeur de texte (nom editeur de texte + fichier)</li>
+<p>(travail sur fichier)</p>
+  <li>Créer un dépot (git init)</li>
+  <li>Suivre un fichier (git add + nom fichier)</li>
+  <li>Sauvegarde (git commit -m "commentaire")</li>
+</ol>
+<p>Sur Github</p>
+<ol>
+  <li>Créer un nouveau repo (new repository)</li>
+  <li>Copier-coller l'URL donnée</li>
+</ol>
+<p>Sur le terminal</p>
+<ol>
+  <li>Lier le dépot à l'URL (git remote add origin + URL)</li>
+  <li>Envoyer le fichier vers Github (git push -u origin master)</li>
+</ol>
+<p>Penser à suivre les sauvegardes sur le terminal avec git status et git log.</p>
+
+
+  <h2 id="html">Balises HTML</h2>
+  <table>
+<caption>Balises de premier niveau</caption>
+<thead>
+  <tr>
+    <th>Balise</th>
+    <th>Utilisation</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td><xmp><hmtl></xmp></td>
+    <td>Balise pricinpale</td>
+  </tr>
+  <tr>
+    <td><xmp><head></head></xmp></td>
+    <td>En-tête de la page</td>
+  </tr>
+  <tr>
+    <td><xmp><body></body></xmp></td>
+    <td>Corps de la page</td>
+</tr>
+  </tbody>
+</table>
+<table>
+<caption>Balise d'en-tête</caption>
+<thead>
+  <tr>
+    <th>Balise</th>
+    <th>Utilisation</th>
+  </tr>
+</thead>
+  <tbody>
+    <tr>
+      <td><xmp><link /></xmp></td>
+      <td>Laison avec une feuille de style</td>
+    </tr>
+    <tr>
+      <td><xmp><meta /></xmp></td>
+      <td>Métadonnées de la page web (charset, mots-clé, etc,..)</td>
+    </tr>
+    <tr>
+      <td><xmp><title></xmp></td>
+      <td>Titre de la page</td>
+    </tr>
+  </tbody>
+</table>
+<table>
+<caption>Balise de structuration du texte</caption>
+<thead>
+  <tr>
+    <th>Balise</th>
+    <th>Utilisation</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td><xmp><abbr></abbr></xmp></td>
+    <td>abbréviation</td>
+  </tr>
+  <tr>
+    <td><xmp><blockquote></blockquote></xmp></td>
+    <td>Citation (longue)</td>
+  </tr>
+  <tr>
+    <td><xmp><cite></cite></xmp></td>
+    <td>Citation du titre d'une oeuvre ou d'un évènement</td>
+  </tr>
+  <tr>
+    <td><xmp><q></q></xmp></td>
+    <td>Citaion (courte)</td>
+  </tr>
+  <tr>
+    <td><xmp><sup></sup></xmp></td>
+    <td>Exposant</td>
+  </tr>
+  <tr>
+    <td><xmp><sub></sub></xmp></td>
+    <td>Indice</td>
+  </tr>
+  <tr>
+    <td><xmp><strong></strong></xmp></td>
+    <td>Mise en valeur (important)</td>
+  </tr>
+  <tr>
+    <td><xmp><em></em></xmp></td>
+    <td>Italique (impportant)</td>
+  </tr>
+  <tr>
+    <td><xmp><mark></mark></xmp></td>
+    <td>Souligné (important)</td>
+  </tr>
+  <tr>
+    <td><xmp><h1></h1></xmp></td>
+    <td>Titre de niveau 1</td>
+  </tr>
+  <tr>
+    <td><xmp><h2></h2></xmp></td>
+    <td>Titre de niveau 2</td>
+  </tr>
+  <tr>
+    <td><xmp><h3></h3></xmp></td>
+    <td>Titre de niveau 3</td>
+  </tr>
+  <tr>
+    <td><xmp><h4></h4></xmp></td>
+    <td>Titre de niveau 4</td>
+  </tr>
+  <tr>
+    <td><xmp><h5></h5></xmp></td>
+    <td>Titre de niveau 5</td>
+  </tr>
+  <tr>
+    <td><xmp><h6></h6></xmp></td>
+    <td>Titre de niveau 6</td>
+  </tr>
+  <tr>
+    <td><xmp><img /></xmp></td>
+    <td>Insertion d'une image</td>
+  </tr>
+  <tr>
+    <td><xmp><figure></figure></xmp></td>
+    <td>Insertion d'une figure (image, code, etc, ...)</td>
+  </tr>
+  <tr>
+    <td><xmp><audio></audio></xmp></td>
+    <td>Insertion de fichier audio</td>
+  </tr>
+  <tr>
+    <td><xmp><video></video></xmp></td>
+    <td>Insertion de fichier video</td>
+  </tr>
+  <tr>
+    <td><xmp><source></source></xmp></td>
+    <td>Format source pour les balises audio et video</td>
+  </tr>
+  <tr>
+    <td><xmp><a></a></xmp></td>
+    <td>Lien hypertexte</td>
+  </tr>
+  <tr>
+    <td><xmp><br /></xmp></td>
+    <td>Retour à la ligne</td>
+  </tr>
+  <tr>
+    <td><xmp><p></p></xmp></td>
+    <td>Paragraphe</td>
+  </tr>
+  <tr>
+    <td><xmp><hr /></xmp></td>
+    <td>Ligne de séparation horizontale</td>
+  </tr>
+  <tr>
+    <td><xmp><adress></adress></xmp></td>
+    <td>Adresse de contact</td>
+  </tr>
+  <tr>
+    <td><xmp><del></del></xmp></td>
+    <td>Texte supprimé</td>
+  </tr>
+  <tr>
+    <td><xmp><ins></ins></xmp></td>
+    <td>Texte inséré</td>
+  </tr>
+  <tr>
+    <td><xmp><dfn></dfn></xmp></td>
+    <td>Définition</td>
+  </tr>
+  <tr>
+    <td><xmp><kbd></kbd></xmp></td>
+    <td>Saisie clavier</td>
+  </tr>
+  <tr>
+    <td><xmp><pre></pre></xmp></td>
+    <td>Affichage formaté (pour les codes sources)</td>
+  </tr>
+  <tr>
+    <td><xmp><progress></progress></xmp></td>
+    <td>insertion de barre de progression (chargement)</td>
+  </tr>
+  <tr>
+    <td><xmp><time></time></xmp></td>
+    <td>Date ou heure</td>
+  </tr>
+</tbody>
+</table>
+<table>
+  <caption>Balise de listes</caption>
+  <thead>
+    <tr>
+      <th>Balise</th>
+      <th>Utilisation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><xmp><ul></ul></xmp></td>
+      <td>Liste à puce, non numérotée</td>
+    </tr>
+    <tr>
+      <td><xmp><ol></ol></xmp></td>
+      <td>Liste numérotée</td>
+    </tr>
+    <tr>
+      <td><xmp><li></li></xmp></td>
+      <td>Elément de la liste</td>
+    </tr>
+    <tr>
+      <td><xmp><dt></dt></xmp></td>
+      <td>Terme à définir</td>
+    </tr>
+    <tr>
+      <td><xmp><dd></dd></xmp></td>
+      <td>définition du terme</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+
+  <h2 id="css">Propriétés CSS</h2>
+
+</body>
+</html>
